@@ -24,3 +24,6 @@ Route::post('/login', 'Api\AuthController@login');
 
 // Route::apiResource('/ceo', 'Api\CEOController') ;
 Route::apiResource('/ceo', 'Api\CEOController')->middleware('checkPassword');
+
+
+Route::get('/products', 'Api\ProductController@index');
