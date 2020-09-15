@@ -66,6 +66,7 @@ class Kernel extends HttpKernel
 
         /*========== Custom Middleware ==========*/
         'checkPassword' => \App\Http\Middleware\checkPassword::class,
+        'changeLanguage' => \App\Http\Middleware\ChangeLanguage::class,
 
     ];
 }

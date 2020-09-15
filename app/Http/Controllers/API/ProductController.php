@@ -15,7 +15,11 @@ class ProductController extends Controller
      */
     public function index()
     {
-        $products = Product::get();
+        // $products = Product::get();
+        $products = Product::select( 
+            'id' ,
+            'name_' . app()->getLocale() . ' as name',
+        )->get();
         return response() -> json( $products );
     }
 
